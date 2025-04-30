@@ -10,7 +10,7 @@ This repository provides a concise, reproducible benchmark that measures the exe
 The `is-prime` benchmark was conducted on an **Apple M2 Pro** processor. The current `is-prime` implementation for **Miden** is generated automatically by the Miden Rust compiler and has not yet undergone optimization. Consequently, the reported Miden runtimes represent baseline, unoptimized performance. Hand-written MASM (Miden Assembly) implementation would most likely yield considerably faster execution.
 
 ### Results:
-![Prime Runtime Comparison](assets/prime_runtime_comparison.png)
+![Prime Runtime Comparison](assets/prime_runtime_plot.png?)
 
 | Input      | Miden (ms) | SP1 (ms)  |
 |------------|------------|-----------|
