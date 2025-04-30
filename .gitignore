@@ -1,0 +1,5 @@
+/target/
+/compiler/
+/miden-vm/
+*.bin
+.DS_Store
