@@ -4,7 +4,10 @@ sp1_zkvm::entrypoint!(main);
 pub fn main() {
     let n = sp1_zkvm::io::read::<u64>();
 
+    println!("cycle-tracker-start: compute");
     let is_prime = is_prime(n);
+    println!("cycle-tracker-end: compute");
+    
 
     sp1_zkvm::io::commit(&is_prime);
 }

@@ -1,4 +1,3 @@
-//! A program that takes a number `n` as input, and writes if `n` is prime as an output.
 use sp1_sdk::{include_elf, utils, ProverClient, SP1ProofWithPublicValues, SP1Stdin};
 use std::time::Instant; // Import Instant for timing
 
@@ -18,14 +17,12 @@ fn main() {
     let client = ProverClient::from_env();
     let (pk, vk) = client.setup(ELF);
 
-    // Start timing before running `prove()`
+    // Start timing before running prove()
     let start_time = Instant::now();
 
     let mut proof = client.prove(&pk, &stdin).run().unwrap();
 
-    let cycles = proof.cycles();
-
-    // Calculate elapsed time after `prove()`
+    // Calculate elapsed time after prove()
     let elapsed_time = start_time.elapsed();
 
     // Print the elapsed time in milliseconds
@@ -41,10 +38,10 @@ fn main() {
 
     // Test a round trip of proof serialization and deserialization.
     proof
-        .save("proof-with-is-prime.bin")
+        .save("proof.bin")
         .expect("saving proof failed");
     let deserialized_proof =
-        SP1ProofWithPublicValues::load("proof-with-is-prime.bin").expect("loading proof failed");
+        SP1ProofWithPublicValues::load("proof.bin").expect("loading proof failed");
 
     // Verify the deserialized proof.
     client
