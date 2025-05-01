@@ -68,13 +68,6 @@ cd is-prime-miden
 
 ```bash
 cd is-prime-sp1
-
-cd program
-cargo prove build
-cd ..
-
-cd script
-RUST_LOG=info cargo run --release -- --execute
-stat -f %z proof.bin
+./run_benchmark.sh
 ```
 

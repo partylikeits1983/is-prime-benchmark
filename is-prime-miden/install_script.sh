@@ -1,3 +1,4 @@
+rustup update nightly
 rustup default nightly
 
 git clone git@github.com:0xMiden/compiler.git

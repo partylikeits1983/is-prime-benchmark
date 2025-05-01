@@ -3,3 +3,4 @@
 /miden-vm/
 *.bin
 .DS_Store
+*.proof
