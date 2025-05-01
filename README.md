@@ -14,7 +14,7 @@ For each test case, we passed a prime number to the `is-prime` program running i
 ![Runtime Comparison](assets/runtime_plot.png)
 ![Proof Size Comparison](assets/proof_size_plot.png)
 ![Cycle Count Comparison](assets/cycle_count_plot.png)
-![Time vs Cycle Count Comparison](assets/time_vs_cycle_count.png)
+![Time vs Cycle Count Comparison](assets/time_vs_cycle_count_with_fit.png)
 
 
 | Prime Input | Miden (ms) | SP1 (ms) | Miden Proof Size (bytes) | SP1 Proof Size (bytes) | Miden Cycle Count | SP1 Cycle Count |
