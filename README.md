@@ -6,16 +6,7 @@ This repository provides a concise, reproducible benchmark that measures the exe
 
 ### Benchmark Setup
 
-The `is-prime` benchmark was conducted on an **Apple M2 Pro** processor. The current `is-prime` implementation for **Miden** is generated automatically by the Miden Rust compiler and has not yet been optimized. Consequently, the reported Miden runtimes represent baseline, unoptimized performance. **A hand‑written MASM (Miden Assembly) implementation would likely execute considerably faster.**
-
-For each test case, we passed a prime number to the `is-prime` program running inside each VM. The table below lists all inputs and the corresponding benchmark results for each zkVM.
-
-### Results
-![Runtime Comparison](assets/runtime_plot.png)
-![Proof Size Comparison](assets/proof_size_plot.png)
-![Cycle Count Comparison](assets/cycle_count_plot.png)
-![Time vs Cycle Count Comparison](assets/time_vs_cycles_with_fit.png)
-
+The `is-prime` benchmark was conducted on an **Apple M2 Pro** processor. For each test case, we passed a prime number to the `is-prime` program running inside each VM. The table below lists all inputs and the corresponding benchmark results for each zkVM.
 
 ### Inputs
 
@@ -33,6 +24,15 @@ For each test case, we passed a prime number to the `is-prime` program running i
 | 131 807 699 | 14 353     | 8431     | 102 678                  | 1 799 786              | 551 477           | 21 440          |
 | 718 064 159 | 60 420     | 9452     | 109 680                  | 1 799 786              | 1 286 741         | 49 523          |
 | 7 069 067 389 | —         | 63 827   | —                        | 12 814 889             | —                 | 3 165 901       |
+
+
+### Results
+![Runtime Comparison](assets/runtime_plot.png)
+![Proof Size Comparison](assets/proof_size_plot.png)
+![Cycle Count Comparison](assets/cycle_count_plot.png)
+![Time vs Cycle Count Comparison](assets/time_vs_cycles_with_fit.png)
+
+
 
 The same Rust `is_prime` function is used in both benchmarks:
 
